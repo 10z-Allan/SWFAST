@@ -1,62 +1,73 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#32105b">
-  <title>Jornada de implantação | Subway</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#32105b">
+<title>Central do Implantador SW | Subway</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="brand">SW <span>· SERVICE OPS</span></div>
-    <div class="hero-copy">
-      <p class="eyebrow">PROJETO SUBWAY</p>
-      <h1>Jornada de implantação<br>do Autoatendimento</h1>
-      <p class="intro">Visão integrada das atividades da franquia no Yungas e da implantação conduzida pela SW.</p>
-    </div>
-    <div class="hero-foot"><span>MAPA DO PROCESSO</span><span>VERSÃO CONCEITUAL · PARA DISCUSSÃO</span></div>
-  </header>
-
-  <main>
-    <section class="summary">
-      <div><strong id="total">15</strong><span>ETAPAS</span></div>
-      <div><strong id="done">0</strong><span>CONCLUÍDAS NESTE NAVEGADOR</span></div>
-      <div class="progress-wrap"><div class="progress-label"><span>PROGRESSO</span><b id="percent">0%</b></div><div class="track"><i id="progress"></i></div></div>
-      <button id="reset" class="reset" type="button">Limpar marcações</button>
+<header class="topbar">
+  <img src="logo-sw.png" alt="SW" class="logo">
+  <div class="topmeta"><span>CENTRAL DO IMPLANTADOR</span><b>PROJETO SUBWAY</b></div>
+</header>
+<main>
+  <section class="intro">
+    <p class="eyebrow">SERVICE OPS · SUBWAY</p>
+    <h1>Central do Implantador</h1>
+    <p>Consulte a sequência de implantação e acesse os procedimentos da SW em um só lugar.</p>
+  </section>
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="side-title">JORNADA SW · IMPLANTAÇÃO</div>
+      <button class="navitem active" data-step="backoffice" type="button">
+        <span class="navnum">01</span><span><b>Configuração da Loja · Backoffice</b><small>Preparação centralizada da loja · Cartilha</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="server" type="button">
+        <span class="navnum">02</span><span><b>Configuração do Servidor</b><small>Etapa seguinte</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="kds" type="button">
+        <span class="navnum">03</span><span><b>Configuração do KDS</b><small>Configuração individual do dispositivo</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="painel" type="button">
+        <span class="navnum">04</span><span><b>Configuração do Painel de Senha</b><small>Configuração do painel</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="totem" type="button">
+        <span class="navnum">05</span><span><b>Instalação do Aplicativo do Totem</b><small>Instalação nos equipamentos</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="testes" type="button">
+        <span class="navnum">06</span><span><b>Teste integrado</b><small>Validação do fluxo completo</small></span><span class="chev">›</span>
+      </button>
+      <button class="navitem" data-step="entrega" type="button">
+        <span class="navnum">07</span><span><b>Entrega técnica</b><small>Validação e conclusão com a loja</small></span><span class="chev">›</span>
+      </button>
+      <div class="sidebar-note"><b>Organização da jornada</b><p>As configurações gerais da loja ficam reunidas em uma única etapa de Backoffice. Depois, a jornada segue para a configuração individual dos equipamentos e a validação final.</p></div>
+    </aside>
+    <section class="content">
+      <div id="backoffice-view">
+        <div class="content-head">
+          <div><p class="eyebrow pink">ETAPA 01 · SW</p><h2>Configuração da Loja · Backoffice</h2><p>Preparação centralizada das configurações da loja antes de avançar para os dispositivos.</p></div>
+          <a class="download" href="cartilha-backoffice.pdf" download>Baixar PDF <span>↓</span></a>
+        </div>
+        <div class="pdf-frame">
+          <iframe src="cartilha-backoffice.pdf#view=FitH" title="Cartilha de Configuração do Backoffice"></iframe>
+        </div>
+        <p class="hint">A cartilha é exibida dentro desta página. Use os controles do visualizador para avançar, voltar e ampliar as páginas.</p>
+      </div>
+      <div id="placeholder-view" hidden>
+        <p class="eyebrow pink" id="placeholder-kicker">ETAPA 02 · SW</p>
+        <h2 id="placeholder-title">Configuração do Servidor</h2>
+        <div class="coming">
+          <div class="coming-icon">＋</div>
+          <h3>Etapa reservada para o procedimento</h3>
+          <p>Esta etapa já faz parte da sequência da Central SW. O passo a passo, as imagens e os materiais de apoio serão incorporados aqui quando forem disponibilizados e validados.</p>
+        </div>
+      </div>
     </section>
-
-    <section class="legend">
-      <span><i class="dot yungas"></i> FRANQUIA / YUNGAS</span>
-      <span><i class="dot sw"></i> IMPLANTAÇÃO / SW</span>
-      <span><i class="dot decision"></i> PONTO DE validação</span>
-    </section>
-
-    <section class="lane">
-      <div class="lane-heading yungas-head"><span>01</span><div><h2>Franquia · Yungas</h2><p>Solicitação e aquisição dos dispositivos</p></div></div>
-      <div class="steps" id="yungas"></div>
-    </section>
-    <div class="handoff"><span>TRANSIÇÃO</span><b>Equipamentos disponibilizados + pré-requisitos da loja confirmados</b><span class="arrow">↓</span></div>
-    <section class="lane">
-      <div class="lane-heading sw-head"><span>02</span><div><h2>Implantação · SW</h2><p>Preparação, configuração, validação e entrega técnica</p></div></div>
-      <div class="steps" id="sw"></div>
-    </section>
-
-    <section class="note">
-      <b>Importante</b>
-      <p>Este mapa organiza uma proposta inicial de fluxo para apresentação e alinhamento. A sequência, os responsáveis e os critérios de passagem entre etapas devem ser validados antes de sua adoção como procedimento oficial.</p>
-    </section>
-    <footer>Allan Vale <span>|</span> Service Ops <small>Projeto Bíblia Subway</small></footer>
-  </main>
-
-  <dialog id="detail">
-    <button class="close" id="close" aria-label="Fechar">×</button>
-    <p class="modal-kicker" id="modal-kicker"></p>
-    <h2 id="modal-title"></h2>
-    <p id="modal-desc"></p>
-    <div class="check-area"><label><input type="checkbox" id="complete"> Marcar etapa como concluída</label></div>
-    <p class="local-hint">A marcação fica salva somente neste navegador e neste dispositivo.</p>
-  </dialog>
-  <script src="app.js"></script>
+  </div>
+  <footer>ALLAN VALE <span>|</span> SERVICE OPS <small>Central de consulta · SW Subway</small></footer>
+</main>
+<script src="app.js"></script>
 </body>
 </html>
