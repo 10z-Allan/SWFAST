@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#32105b">
+  <title>Jornada de implantação | Subway</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">SW <span>· SERVICE OPS</span></div>
+    <div class="hero-copy">
+      <p class="eyebrow">PROJETO SUBWAY</p>
+      <h1>Jornada de implantação<br>do Autoatendimento</h1>
+      <p class="intro">Visão integrada das atividades da franquia no Yungas e da implantação conduzida pela SW.</p>
+    </div>
+    <div class="hero-foot"><span>MAPA DO PROCESSO</span><span>VERSÃO CONCEITUAL · PARA DISCUSSÃO</span></div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <div><strong id="total">15</strong><span>ETAPAS</span></div>
+      <div><strong id="done">0</strong><span>CONCLUÍDAS NESTE NAVEGADOR</span></div>
+      <div class="progress-wrap"><div class="progress-label"><span>PROGRESSO</span><b id="percent">0%</b></div><div class="track"><i id="progress"></i></div></div>
+      <button id="reset" class="reset" type="button">Limpar marcações</button>
+    </section>
+
+    <section class="legend">
+      <span><i class="dot yungas"></i> FRANQUIA / YUNGAS</span>
+      <span><i class="dot sw"></i> IMPLANTAÇÃO / SW</span>
+      <span><i class="dot decision"></i> PONTO DE validação</span>
+    </section>
+
+    <section class="lane">
+      <div class="lane-heading yungas-head"><span>01</span><div><h2>Franquia · Yungas</h2><p>Solicitação e aquisição dos dispositivos</p></div></div>
+      <div class="steps" id="yungas"></div>
+    </section>
+    <div class="handoff"><span>TRANSIÇÃO</span><b>Equipamentos disponibilizados + pré-requisitos da loja confirmados</b><span class="arrow">↓</span></div>
+    <section class="lane">
+      <div class="lane-heading sw-head"><span>02</span><div><h2>Implantação · SW</h2><p>Preparação, configuração, validação e entrega técnica</p></div></div>
+      <div class="steps" id="sw"></div>
+    </section>
+
+    <section class="note">
+      <b>Importante</b>
+      <p>Este mapa organiza uma proposta inicial de fluxo para apresentação e alinhamento. A sequência, os responsáveis e os critérios de passagem entre etapas devem ser validados antes de sua adoção como procedimento oficial.</p>
+    </section>
+    <footer>Allan Vale <span>|</span> Service Ops <small>Projeto Bíblia Subway</small></footer>
+  </main>
+
+  <dialog id="detail">
+    <button class="close" id="close" aria-label="Fechar">×</button>
+    <p class="modal-kicker" id="modal-kicker"></p>
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+    <div class="check-area"><label><input type="checkbox" id="complete"> Marcar etapa como concluída</label></div>
+    <p class="local-hint">A marcação fica salva somente neste navegador e neste dispositivo.</p>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
